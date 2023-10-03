@@ -20,7 +20,7 @@ export default function Landing() {
     "Date",
     "CPH + Margin",
     " ",
-    " ",
+    
   ];
   const details = [
     "01",
@@ -39,14 +39,7 @@ export default function Landing() {
   const dispatch = useDispatch();
   return (
     <div className="">
-      <div className="relative flex justify-center px-[5%] pt-[10px] items-center">
-        <div className="absolute flex items-center top-[5px] left-[10px] ">
-          <img src="/images/man.svg" alt="" />
-          <p className="ml-[10px]">Qwiklif Admin</p>
-        </div>
-
-        <img src="/images/logo.png" alt="logo" />
-      </div>
+     
       <div className="px-[5%]">
         <h1 className="font-semibold text-[20px]">Details</h1>
         <table className="border w-[100%]">
@@ -54,7 +47,7 @@ export default function Landing() {
             <tr className="border">
               {header.map((data, i) => (
                 <th
-                  className="border text-[12px] border-black p-[10px]"
+                  className="border text-[12px] border-black p-[8px]"
                   key={i}
                 >
                   {data}
@@ -76,10 +69,7 @@ export default function Landing() {
                 onClick={() => dispatch(showModals())}
                 className="border cursor-pointer text-[12px] border-black p-[10px]"
               >
-                Update
-              </td>
-              <td className="border text-[12px] border-black p-[10px]">
-                Remove
+                Add Margin
               </td>
             </tr>
           </tbody>
