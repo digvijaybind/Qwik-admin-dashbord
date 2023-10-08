@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import { showModals } from "@/store/slices";
+import { Shadow } from "../Utils/utils";
 import Modal from "../Modal";
 import { useDispatch, useSelector } from "react-redux";
 export default function Landing() {
   const showModal = useSelector((state) => state);
-  console.log(showModal);
+  
   const header = [
     "Number",
     "C_Name",
@@ -38,18 +39,14 @@ export default function Landing() {
   ];
   const dispatch = useDispatch();
   return (
-    <div className="">
-     
-      <div className="px-[5%]">
+    <Shadow className="w-[95%] ml-[3%] py-[30px]">
+      <div className="px-[30px] ">
         <h1 className="font-semibold text-[20px]">Details</h1>
         <table className="border w-[100%]">
           <thead>
             <tr className="border">
               {header.map((data, i) => (
-                <th
-                  className="border text-[12px] border-black p-[8px]"
-                  key={i}
-                >
+                <th className="border text-[12px] border-black p-[8px]" key={i}>
                   {data}
                 </th>
               ))}
@@ -78,6 +75,6 @@ export default function Landing() {
           <Modal></Modal>
         </div>
       </div>
-    </div>
+    </Shadow>
   );
 }
