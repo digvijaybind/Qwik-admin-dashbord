@@ -3,7 +3,7 @@
   background: var(--greys-blue-grey-300, #f9fafb);
 }
 .Topbar_container {
-  width: calc(100vw - 200px);
+  width: calc(1300px - 200px);
   position: fixed;
   top: 0;
   left: 200px;
