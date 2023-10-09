@@ -39,7 +39,7 @@ export default function Landing() {
   ];
   const dispatch = useDispatch();
   return (
-    <Shadow className="w-[95%] ml-[3%] py-[30px]">
+    <Shadow className="w-[1100px] ml-[3%] py-[30px]">
       <div className="px-[30px] ">
         <h1 className="font-semibold text-[20px]">Details</h1>
         <table className="border w-[100%]">

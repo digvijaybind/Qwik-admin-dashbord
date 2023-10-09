@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Nav></Nav>
           <Topbar></Topbar>
-          <div className="ml-[200px] mt-[150px]">{children} </div>
+          <div className="ml-[200px] mt-[150px] overflow-x-auto">{children} </div>
         </Providers>
       </body>
     </html>
