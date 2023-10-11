@@ -1,12 +1,17 @@
 "use client";
 import Image from "next/image";
-import { showModals } from "@/store/slices";
-import { Shadow } from "../Utils/utils";
+import {showModals} from "@/store/slices";
+import {Shadow} from "../Utils/utils";
 import Modal from "../Modal";
-import { useDispatch, useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {useState} from "react";
 export default function Landing() {
   const showModal = useSelector((state) => state);
-  
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    // Add more form fields as needed
+  });
   const header = [
     "Number",
     "C_Name",
@@ -21,7 +26,6 @@ export default function Landing() {
     "Date",
     "CPH + Margin",
     " ",
-    
   ];
   const details = [
     "01",
@@ -38,6 +42,7 @@ export default function Landing() {
     "600$",
   ];
   const dispatch = useDispatch();
+
   return (
     <Shadow className="w-[1100px] ml-[3%] py-[30px]">
       <div className="px-[30px] ">
