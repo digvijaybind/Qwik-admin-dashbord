@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
           <Topbar></Topbar>
           <NoOperators></NoOperators>
 
-          <div className="ml-[200px] sm:ml-0 mt-[150px] sm:mt-[50px] sm:overflow-x-hidden overflow-x-auto">
+          <div className="ml-[200px] sm:ml-0 mt-[150px] sm:mt-[100px] sm:overflow-x-hidden overflow-x-auto">
             {children}{" "}
           </div>
           <Footer></Footer>

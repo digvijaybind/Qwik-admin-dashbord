@@ -26,7 +26,7 @@ const NoOperators = () => {
       } fixed w-[100vw] h-[100vh] top-0 left-0 z-[300]`}
     >
       <div
-        onClick={() => dispatch(setWhatToShow("home"))}
+        onClick={() => dispatch(setWhatToShow(""))}
         className="absolute top-0 left-0 w-[100vw] h-[100vh] sm:hidden  bg-[#D9D9D98C] "
       ></div>
       <div className=" absolute top-[5vh] sm:top-[100px] overflow-y-hidden overflow-y-scroll overflow-x-scroll left-[50%] transform translate-x-[-50%] z-[500] w-[90vw] sm:w-[100%] bg-white  h-[500px]">

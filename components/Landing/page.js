@@ -37,7 +37,7 @@ export default function Landing() {
     <Shadow
       className={`${
         whatToShow == "home" ? "block sm:block" : "block sm:hidden"
-      } w-[1100px] sm:pb-[60px] sm:w-full sm:overflow-x-scroll ml-[3%] py-[30px]`}
+      } w-[1100px] sm:pb-[60px] sm:hidden sm:w-full sm:overflow-x-scroll ml-[3%] py-[30px]`}
     >
       <div className="px-[30px] ">
         <h1 className="font-semibold text-[20px]">Details</h1>

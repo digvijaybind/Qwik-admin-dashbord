@@ -7,7 +7,7 @@ const Footer = () => {
   const dispatch = useDispatch();
   return (
     <div
-      className={`hidden sm:flex  justify-between bg-white  items-center py-[10px] px-[15px] sm-block fixed bottom-0 left-0 w-[100vw]`}
+      className={`hidden sm:flex  justify-between bg-white  items-center py-[10px] px-[15px] sm-block fixed z-[600] bottom-0 left-0 w-[100vw]`}
     >
       <div onClick={() => dispatch(setWhatToShow("home"))}>
         <svg
