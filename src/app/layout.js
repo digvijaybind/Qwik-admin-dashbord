@@ -1,8 +1,11 @@
+
+
 import "./globals.css";
 import { Inter, Poppins } from "next/font/google";
 import { Providers } from "../store/provider";
 import Nav from "../../components/Nav/nav";
 import Topbar from "../../components/Nav/topbar";
+import NoOperators from "../../components/Nooperators/noOperators";
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -22,7 +25,8 @@ export default function RootLayout({ children }) {
         <Providers>
           <Nav></Nav>
           <Topbar></Topbar>
-          <div className="ml-[200px] mt-[150px] overflow-x-auto">{children} </div>
+          <NoOperators></NoOperators>
+          <div className="ml-[200px] sm:ml-0 mt-[150px] sm:overflow-x-hidden overflow-x-auto">{children} </div>
         </Providers>
       </body>
     </html>

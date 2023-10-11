@@ -8,13 +8,13 @@ import { colorcard } from "../../components/sidenav";
 export default function Home() {
   return (
     <main>
-      <div className="flex  items-stretch mb-[30px] pl-[30px]">
-        <Shadow className={"w-[700px] mr-[30px]  p-[20px]"}>
+      <div className="flex  sm:flex-col w-[1300px] sm:w-full   items-stretch mb-[30px] pl-[30px] sm:px-[10px] ">
+        <Shadow className={"w-[700px] sm:w-full  sm:overflow-x-scroll sm:mb-[30px] mr-[30px] sm:mr-0  p-[20px]"}>
           <p className="font-[600] py-[5px] text-[#05004E] text-[20px]">
             Quote Requested
           </p>
           <p className="text-[#737791]">Order Summary</p>
-          <div className="flex pt-[20px] items-center">
+          <div className="flex pt-[20px] w-full sm:overflow-x-scroll  items-center">
             {colorcard.map((el, i) => (
               <div key={i} className="mr-[15px]">
                 <Colorcard
@@ -27,18 +27,18 @@ export default function Home() {
             ))}
           </div>
         </Shadow>
-        <Shadow className={"w-[500px] p-[20px]"}>
+        <Shadow className={"w-[300px] sm:w-full p-[20px]"}>
           <p className="font-[600] py-[5px] text-[#05004E] text-[20px]">
             Aircraft Location
           </p>
         </Shadow>
       </div>
-      <div className="pl-[30px] flex mb-[30px]">
-        <Shadow className={"w-[600px] mr-[20px] p-[20px]"}>
+      <div className="pl-[30px] w-[1100px] sm:w-full sm:px-[10px] flex sm:flex-col mb-[30px]">
+        <Shadow className={"w-[600px] sm:w-full sm:mb-[30px] mr-[20px] sm:overflow-x-scroll p-[20px]"}>
           <p className="p-[20px] text-[20px] text-[#05004E] font-[600]">
             Active Fleet
           </p>
-          <table className="">
+          <table className="sm:w-[600px]">
             <thead>
               <tr>
                 {[
@@ -99,11 +99,11 @@ export default function Home() {
             </tbody>
           </table>
         </Shadow>
-        <Shadow className={"w-[500px] p-[20px]"}>
+        <Shadow className={"w-[500px] sm:w-full sm:overflow-x-scroll p-[20px]"}>
           <p className="p-[20px] text-[20px] text-[#FF7C03] font-[800]">
             Fleet under maintenance
           </p>
-          <table className="w-full">
+          <table className="w-full sm:w-[500px]">
             <thead>
               <tr>
                 {["#", "Name", "Description", "Delivery Date"].map((el) => (
