@@ -5,6 +5,7 @@ import { showModals } from "@/store/slices";
 const Modal = () => {
   const dispatch = useDispatch();
   const show = useSelector((state) => state.operator.showModal);
+  
   console.log(show);
   return (
     <div
