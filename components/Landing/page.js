@@ -6,6 +6,7 @@ import Modal from "../Modal";
 import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
 export default function Landing() {
+
   const showModal = useSelector((state) => state);
   const [formData, setFormData] = useState({
     name: "",
@@ -38,6 +39,8 @@ export default function Landing() {
     "600$",
   ];
   const dispatch = useDispatch();
+  const whatToShow = useSelector((state) => state.operator.whatToShow);
+
   return (
     <Shadow
       className={`${
