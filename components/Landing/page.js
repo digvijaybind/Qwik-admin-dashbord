@@ -5,32 +5,26 @@ import { Shadow } from "../Utils/utils";
 import Modal from "../Modal";
 import { useDispatch, useSelector } from "react-redux";
 export default function Landing() {
-  const showModal = useSelector((state) => state);
-  
+
   const header = [
     "Number",
-    "C_Name",
     "E-Address",
     "Contact No",
     "Aircraft Type",
     "Tail Sign",
-    "Password",
     "Location",
     "Charges per hour",
     "Speed",
     "Date",
     "CPH + Margin",
     " ",
-    
   ];
   const details = [
     "01",
-    "Qatar",
     "vipin@gmail",
     "01010101",
     "A380",
     "A380",
-    "****",
     "Dubai",
     "450$",
     "500 MILES",
@@ -38,8 +32,13 @@ export default function Landing() {
     "600$",
   ];
   const dispatch = useDispatch();
+  const whatToShow = useSelector((state) => state.operator.whatToShow);
   return (
-    <Shadow className="w-[1100px] sm:w-full sm:overflow-x-scroll ml-[3%] py-[30px]">
+    <Shadow
+      className={`${
+        whatToShow == "home" ? "block sm:block" : "block sm:hidden"
+      } w-[1100px] sm:pb-[60px] sm:w-full sm:overflow-x-scroll ml-[3%] py-[30px]`}
+    >
       <div className="px-[30px] ">
         <h1 className="font-semibold text-[20px]">Details</h1>
         <table className="border w-[100%] sm:w-[1100px]">

@@ -5,11 +5,22 @@ import { Shadow } from "../../components/Utils/utils";
 import Toggle from "react-toggle";
 import "react-toggle/style.css";
 import { colorcard } from "../../components/sidenav";
+import { useDispatch, useSelector } from "react-redux";
 export default function Home() {
+  const whatToShow = useSelector((state) => state.operator.whatToShow);
+  const dispatch = useDispatch();
   return (
     <main>
-      <div className="flex  sm:flex-col w-[1300px] sm:w-full   items-stretch mb-[30px] pl-[30px] sm:px-[10px] ">
-        <Shadow className={"w-[700px] sm:w-full  sm:overflow-x-scroll sm:mb-[30px] mr-[30px] sm:mr-0  p-[20px]"}>
+      <div
+        className={`${
+          whatToShow === "home" ? "sm:flex flex" : "sm:hidden flex"
+        }   sm:flex-col w-[1300px] sm:w-full   items-stretch mb-[30px] pl-[30px] sm:px-[10px] `}
+      >
+        <Shadow
+          className={
+            "w-[700px] sm:w-full  sm:overflow-x-scroll sm:mb-[30px] mr-[30px] sm:mr-0  p-[20px]"
+          }
+        >
           <p className="font-[600] py-[5px] text-[#05004E] text-[20px]">
             Quote Requested
           </p>
@@ -33,8 +44,16 @@ export default function Home() {
           </p>
         </Shadow>
       </div>
-      <div className="pl-[30px] w-[1100px] sm:w-full sm:px-[10px] flex sm:flex-col mb-[30px]">
-        <Shadow className={"w-[600px] sm:w-full sm:mb-[30px] mr-[20px] sm:overflow-x-scroll p-[20px]"}>
+      <div
+        className={`${
+          whatToShow === "status" ? " flex sm:flex" : "flex sm:hidden"
+        } pl-[30px] w-[1100px] sm:w-full sm:px-[10px]  sm:flex-col mb-[30px]`}
+      >
+        <Shadow
+          className={
+            "w-[600px] sm:w-full sm:mb-[30px] mr-[20px] sm:overflow-x-scroll p-[20px]"
+          }
+        >
           <p className="p-[20px] text-[20px] text-[#05004E] font-[600]">
             Active Fleet
           </p>

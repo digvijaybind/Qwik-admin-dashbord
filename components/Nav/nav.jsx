@@ -3,7 +3,7 @@
 import styles from "./nav.module.css";
 import { widgets } from "../sidenav";
 import { useDispatch } from "react-redux";
-import { showNoOfOperator } from "@/store/slices";
+import { setWhatToShow, showNoOfOperator } from "@/store/slices";
 const Nav = () => {
   const dispatch = useDispatch();
   return (
@@ -17,7 +17,7 @@ const Nav = () => {
             <p
               onClick={() => {
                 if (text === "Number of operators") {
-                  dispatch(showNoOfOperator());
+                  dispatch(setWhatToShow("operator"));
                 } else " ";
               }}
               className="p-[5px] text-[14px]"
