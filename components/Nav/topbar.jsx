@@ -4,8 +4,8 @@ const Topbar = () => {
     <div
       className={`${styles.Topbar_container} px-[30px] flex justify-between items-center py-[30px] bg-white z-[200]`}
     >
-      <p className="text-[25px] text-[#151D48] font-[600]">Admin Panel</p>
-      <div className="relative">
+      <p className="text-[25px] text-[#151D48] font-[600] sm:hidden">Admin Panel</p>
+      <div className="relative sm:hidden">
         <svg
           className="absolute top-[7px] left-[2px]"
           xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ const Topbar = () => {
         <input
           placeholder="Search here..."
           type="text"
-          className={`${styles.Topbar_input} w-[300px] py-[10px] pl-[40px] text-[14px] rounded-[10px] outline-0`}
+          className={`${styles.Topbar_input}  w-[300px] py-[10px] pl-[40px] text-[14px] rounded-[10px] outline-0`}
         />
       </div>
 
