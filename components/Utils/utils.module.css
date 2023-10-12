@@ -4,3 +4,11 @@
   background: #fff;
   box-shadow: 0px 4px 20px 0px rgb(86 80 80 / 50%);
 }
+.Add_button {
+  background: linear-gradient(
+    180deg,
+    #40c0dc 90.1%,
+    rgba(64, 209, 240, 0) 100%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}

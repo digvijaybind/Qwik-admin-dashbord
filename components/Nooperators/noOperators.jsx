@@ -1,7 +1,8 @@
 "use client";
 
-import { setWhatToShow, showNoOfOperator } from "@/store/slices";
+import { setWhatToShow, showModals, showNoOfOperator } from "@/store/slices";
 import { useDispatch, useSelector } from "react-redux";
+import { AddButton } from "../Utils/utils";
 
 const NoOperators = () => {
   const details = {
@@ -124,12 +125,17 @@ const NoOperators = () => {
                         />
                       </svg>
                     </div>
-                 
                   </td>
                 </tr>
               ))}
           </tbody>
         </table>
+        <div
+          onClick={() => dispatch(showModals())}
+          className="flex justify-end mt-[30px]"
+        >
+          <AddButton></AddButton>
+        </div>
       </div>
     </div>
   );

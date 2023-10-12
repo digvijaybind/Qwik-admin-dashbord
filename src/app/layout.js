@@ -7,6 +7,7 @@ import Nav from "../../components/Nav/nav";
 import Topbar from "../../components/Nav/topbar";
 import NoOperators from "../../components/Nooperators/noOperators";
 import Footer from "../../components/Footer/footer";
+import Modal from "../../components/Modal";
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <Nav></Nav>
           <Topbar></Topbar>
           <NoOperators></NoOperators>
+          <Modal></Modal>
 
           <div className="ml-[200px] sm:ml-0 mt-[150px] sm:mt-[100px] sm:overflow-x-hidden overflow-x-auto">
             {children}{" "}
