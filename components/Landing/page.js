@@ -22,6 +22,7 @@ export default function Landing() {
     "Charges per hour",
     "Speed",
     "Date",
+ 
   ];
   const details = [
     "01",
@@ -33,6 +34,7 @@ export default function Landing() {
     "450$",
     "500 MILES",
     "02 Oct 2023",
+    "Add margin",
   ];
   const dispatch = useDispatch();
   const whatToShow = useSelector((state) => state.operator.whatToShow);
@@ -71,6 +73,7 @@ export default function Landing() {
                       {data}
                     </td>
                   ))}
+
                 </tr>
               ))}
           </tbody>

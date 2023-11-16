@@ -1,11 +1,11 @@
 "use client";
-import { useDispatch, useSelector } from "react-redux";
-import { TextInput } from "./Form/TextInput";
-import { showModals } from "@/store/slices";
+import {useDispatch, useSelector} from "react-redux";
+import {TextInput} from "./Form/TextInput";
+import {showModals} from "@/store/slices";
 const Modal = () => {
   const dispatch = useDispatch();
   const show = useSelector((state) => state.operator.showModal);
-  
+
   console.log(show);
   return (
     <div
@@ -16,7 +16,7 @@ const Modal = () => {
       <div className="fixed top-0 left-0 bg-[#D9D9D98C] w-[100vw] h-[100vh]"></div>
       <div className="h-[200%] w-[100%] overflow-y-auto">
         <div
-          className={` bg-white shadow-md rounded-[4px] absolute top-[100px] left-[50%]  transform translate-x-[-50%] w-[500px] sm:w-[100vw] px-[30px] px-[40px]`}
+          className={` bg-white shadow-md rounded-[4px] absolute top-[100px] left-[50%]  transform translate-x-[-50%] w-[500px] sm:w-[300px] px-[30px] px-[40px]`}
         >
           <div onClick={() => dispatch(showModals())}>
             <svg
@@ -60,19 +60,34 @@ const Modal = () => {
               ></TextInput>
             </div>
             <div className="flex sm:flex-col justify-between w-[100%]">
-              <TextInput className={"w-[48%] sm:w-[100%]"} label={"Tail Sign"}></TextInput>
-              <TextInput className={"w-[48%] sm:w-[100%]"} label={"Password"}></TextInput>
+              <TextInput
+                className={"w-[48%] sm:w-[100%]"}
+                label={"Tail Sign"}
+              ></TextInput>
+              <TextInput
+                className={"w-[48%] sm:w-[100%]"}
+                label={"Password"}
+              ></TextInput>
             </div>
             <div className="flex sm:flex-col justify-between w-[100%]">
-              <TextInput className={"w-[48%] sm:w-[100%]"} label={"Location"}></TextInput>
+              <TextInput
+                className={"w-[48%] sm:w-[100%]"}
+                label={"Location"}
+              ></TextInput>
               <TextInput
                 className={"w-[48%] sm:w-[100%]"}
                 label={"Charges Per Hour"}
               ></TextInput>
             </div>
             <div className="flex sm:flex-col justify-between w-[100%]">
-              <TextInput className={"w-[48%] sm:w-[100%]"} label={"Speed"}></TextInput>
-              <TextInput className={"w-[48%] sm:w-[100%]"} label={"Date"}></TextInput>
+              <TextInput
+                className={"w-[48%] sm:w-[100%]"}
+                label={"Speed"}
+              ></TextInput>
+              <TextInput
+                className={"w-[48%] sm:w-[100%]"}
+                label={"Date"}
+              ></TextInput>
             </div>
             <div className="flex my-[10px]">
               <input type="checkbox" className=" mr-[10px]" />
