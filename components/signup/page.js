@@ -11,10 +11,7 @@ import axios from "axios";
 
 const SignupComponent = () => {
   const [formData, setFormdData] = useState({
-    company_name: "",
     email_address: "",
-    contact_number: "",
-    country_name: "",
     password: "",
   });
 
@@ -59,7 +56,7 @@ const SignupComponent = () => {
                   className="text-base text-gray-900_9e w-auto"
                   size="txtMontserratRegular16"
                 >
-                  Let’s get you all set up so you can access your Operator
+                  Let’s get you all set up so you can access Qwiklif admins
                   account.
                 </Text>
               </div>
@@ -68,41 +65,10 @@ const SignupComponent = () => {
                   <div className="flex md:flex-col flex-row gap-6 items-start justify-start w-full">
                     <input
                       type="text"
-                      name="company_name"
-                      onChange={handleChange}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="company_name"
-                      required
-                    ></input>
-                  </div>
-                  <div className="flex md:flex-col flex-row gap-6 items-start justify-start w-full">
-                    <input
-                      type="text"
                       name="email_address"
                       onChange={handleChange}
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="email_address"
-                      required
-                    ></input>
-                  </div>
-                  <div className="flex md:flex-col flex-row gap-6 items-start justify-start w-full">
-                    <input
-                      type="text"
-                      name="contact_number"
-                      onChange={handleChange}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Contact_No"
-                      required
-                    ></input>
-                  </div>
-
-                  <div className="flex md:flex-col flex-row gap-6 items-start justify-start w-full">
-                    <input
-                      type="text"
-                      name="country_name"
-                      onChange={handleChange}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="country_name"
                       required
                     ></input>
                   </div>

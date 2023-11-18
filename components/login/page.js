@@ -48,7 +48,7 @@ const LoginComponent = () => {
                 className="text-base text-gray-900_9e w-auto"
                 size="txtMontserratRegular16"
               >
-                Login to access your Operator account
+                Login to access Qwiklif Admin Account
               </Text>
             </div>
             <div className="flex flex-col gap-10 items-start justify-start w-full">
